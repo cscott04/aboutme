@@ -1,5 +1,7 @@
 'use strict';
 let score = 0;
+let username = prompt('what is your name');
+
 let person = prompt('Do I like Jackson?');
 person = person.toUpperCase();
 // console.log(person);
@@ -60,6 +62,10 @@ let number = '';
 let i = 0;
 while (number !== '5') {
   number = prompt('Guess a number betwwen 1 and 10');
+  if (number === '5') {
+    alert('you are correct');
+    score++;
+  }
   if (number < '5') {
     alert('to low');
   } else if (number > '5') {
@@ -72,10 +78,18 @@ while (number !== '5') {
 }
 let singers = ['monica', 'fantasia', 'whitney houston'];
 let answer = prompt('Guess my favorite singer').toLowerCase();
+for (let i = 0; i < 6; i++) {}
 if (answer === singers[0] || answer === singers[1] || answer === singers[2]) {
   alert(answer + ' is correct');
   score++;
 }
 alert('you scored ' + score);
+
+let greeting = document.querySelector('.greeting');
+greeting.textContent = 'Hi ${username} welcome to my page';
+
+let message = document.querySelector('.message');
+message.textContent = 'see you later ${username} thanks for visiting my page';
+
 // alert(person);
 // let color = prompt();
